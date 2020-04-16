@@ -11,7 +11,6 @@ export default class UiSelectComponent extends React.Component {
             <div className="select-wrapper">
                 <UiSelect price={listItems}/>
                 <p className="select-wrapper__month">€/Month</p>
-                {/*<h1>{state.activeSlide}</h1>*/}
             </div>
         );
     }

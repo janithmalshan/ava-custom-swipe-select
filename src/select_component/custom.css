@@ -13,15 +13,27 @@
     font-size: 30px;
     height: 50px;
 }
-.price-item:focus{
+
+.price-item:hover {
+    cursor: pointer;
+}
+
+.price-item:focus {
     outline: none;
 }
+
+.slick-current .price-item:hover {
+    cursor: default;
+}
+
 .slick-active .price-item,
 .slick-center .price-item,
-.slick-current .price-item{
+.slick-current .price-item {
     font-size: 32px;
     color: #005e51;
+    transition: all ease-in-out;
 }
+
 .select-wrapper__month {
     color: #212121;
     display: inline-block;
@@ -30,6 +42,7 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
 }
+
 .select-wrapper {
     width: 100%;
     max-width: 400px;
@@ -37,27 +50,39 @@
     margin: 100px auto;
     position: relative;
 }
+
 .select-wrapper::before {
     content: '';
     display: inline-block;
     width: 20px;
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.65) 60%, rgba(255,255,255,0) 80%);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.65) 60%, rgba(255, 255, 255, 0) 80%);
     height: 100%;
     position: absolute;
     left: 0;
     top: 0;
     z-index: 1;
 }
+
 .select-wrapper::after {
     content: '';
     display: inline-block;
     width: 20px;
-    background: rgb(255,255,255);
-    background: linear-gradient(-90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.65) 60%, rgba(255,255,255,0) 80%);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(-90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.65) 60%, rgba(255, 255, 255, 0) 80%);
     height: 100%;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 1;
+}
+
+.current-select {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    opacity: 0.2;
 }
